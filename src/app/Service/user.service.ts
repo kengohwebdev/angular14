@@ -13,4 +13,12 @@ export class UserService {
    ProceedLogin(inputdata:any){
     return this.http.post('https://localhost:7024/api/Account/login',inputdata);
    }
+
+   IsLoggedIn(){
+    return localStorage.getItem('token')!=null;
+   }
+
+   GetToken(){
+    return localStorage.getItem('token')!=null?localStorage.getItem('token'):'';
+   }
 }
