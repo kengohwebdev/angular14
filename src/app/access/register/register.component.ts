@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from 'src/app/Service/user.service';
+import * as alertify from 'alertifyjs';
 
 @Component({
   selector: 'app-register',
@@ -34,6 +35,7 @@ export class RegisterComponent implements OnInit {
         this.respdata=item;
         //console.log(this.respdata);
         if(this.respdata.result=='pass'){
+          alertify.success("Registered successfully please contact admin for activation")
           alert("Registered successfully please contact admin for activation")
           this.RedirectLogin();
         }else{
