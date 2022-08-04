@@ -8,6 +8,8 @@ export class UserService {
 
   constructor(private http:HttpClient) {
 
+    // apiurl='https//localhost:4200/api/UserMaster';
+
    }
 
    ProceedLogin(inputdata:any){
