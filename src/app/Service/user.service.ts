@@ -21,4 +21,8 @@ export class UserService {
    GetToken(){
     return localStorage.getItem('token')!=null?localStorage.getItem('token'):'';
    }
+
+   Registration(inputdata:any){
+    return this.http.post('https://localhost:7024/api/Account/signup',inputdata);
+   }
 }
