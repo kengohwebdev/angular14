@@ -13,6 +13,8 @@ import { AddcontactComponent } from './addcontact/addcontact.component';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {HttpClientModule} from '@angular/common/http';
+import { UserComponent } from './user/user.component';
+import { MaterialModule } from 'src/Material-Module';
 
 @NgModule({
   declarations: [
@@ -21,14 +23,16 @@ import {HttpClientModule} from '@angular/common/http';
     AboutComponent,
     ContactComponent,
     StatusComponent,
-    AddcontactComponent
+    AddcontactComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    MaterialModule
     
     //LoginComponent
     //AccessRoutingModule
